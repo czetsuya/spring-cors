@@ -7,6 +7,8 @@ Angular.
 
 This is the resource server of this exercise.
 
+Client side is available at https://github.com/czetsuya/spring-cors-nextjs.
+
 ## What is CORS and why do we need CORS? 
    
 CORS or Cross-Origin Resource Sharing is a browser security feature that restricts accessing the resource of server b from an HTTP request initiated by a script coming from server a.
