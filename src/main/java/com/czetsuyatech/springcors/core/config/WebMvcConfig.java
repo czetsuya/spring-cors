@@ -2,7 +2,6 @@ package com.czetsuyatech.springcors.core.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
@@ -10,15 +9,15 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @since
  */
 @Configuration
-@EnableWebMvc
 public class WebMvcConfig implements WebMvcConfigurer {
 
   @Override
   public void addCorsMappings(CorsRegistry registry) {
     registry.addMapping("/**")
         .allowedMethods("*")
-        .allowedOrigins("http://localhost:8000")
-        .maxAge(-1)   // add maxAge
-        .allowCredentials(false);
+        .allowedOrigins("http://192.168.1.9:8080")
+        .allowedHeaders("*")
+        .allowCredentials(false)
+        .maxAge(-1);
   }
 }

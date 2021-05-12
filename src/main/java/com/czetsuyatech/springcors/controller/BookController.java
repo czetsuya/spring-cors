@@ -2,7 +2,7 @@ package com.czetsuyatech.springcors.controller;
 
 import java.util.HashMap;
 import java.util.Map;
-import org.springframework.web.bind.annotation.CrossOrigin;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,11 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/books")
-@CrossOrigin(originPatterns = "google.com")
+@Log4j2
 public class BookController {
 
   @GetMapping
   public Map<String, String> getBooks() {
+
+    log.debug("/books");
 
     Map<String, String> books = new HashMap<>();
     books.put("1", "Hamlet");
