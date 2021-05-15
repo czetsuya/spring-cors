@@ -19,6 +19,16 @@ fetch and manipulation happens.
 
 On the other side, we have our frontend client which is normally powered by either React, Angular, or Vue. 
 For example, czetsuya.com.
+
+### How CORS Work?
+
+![CORS flow](./docs/spring-cors.png)
+
+This is a sequence diagram when calling GET /books endpoint.
+
+1. Perform a CORS preflight request
+2. If CORS headers from the server match the client proceed, otherwise throw a CORS error
+3. Return response with data.a
    
 ## Different Ways of Configuring CORS
 
